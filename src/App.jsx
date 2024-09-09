@@ -25,7 +25,7 @@ import Vm from "./Pages/Vm";
 import Addvm from "./Pages/Addvm";
 import Vehicle from "./Pages/Vehicle";
 import AddVehicle from "./Pages/AddVehicle";
-
+import { mainUrl } from "./Pages/api";
 function App() {
   const dispatch=useDispatch()
   const vehicle=useSelector(state=>state.carts.vehicle)
@@ -42,12 +42,12 @@ function App() {
      }
     try{
       if(vehicle.length===0){
-           fetch("http://localhost:8989/rental/list_vm").then(res=>res.json()).then(data=>{
+           fetch(`${mainUrl}/rental/list_vm`).then(res=>res.json()).then(data=>{
              dispatch(loadVehicle(data.data))              
        }).catch(res=>console.log(res))
       }
      if(all_vehicle.length===0){
-        fetch("http://localhost:8989/rental/list_vehicle").then(res=>res.json()).then(data=>{
+        fetch(`${mainUrl}/rental/list_vehicle`).then(res=>res.json()).then(data=>{
           dispatch(loadall_vehicle(data.data))
      }).catch(res=>console.log(res))
     }
@@ -60,7 +60,7 @@ function App() {
   },[])
   if(login.islogin&&cust.length===0&&login.role=="admin"){
       try{
-        fetch("http://localhost:8989/auth/admin/cust/list",{
+        fetch(`${mainUrl}/auth/admin/cust/list`,{
           headers:{
              'Authorization' : `Bearer ${login.token}`
           }
@@ -77,7 +77,7 @@ function App() {
   }
   if(login.islogin&&sp_vehicle.length===0&&login.role=="Service_Provider"){
     try{
-      fetch("http://localhost:8989/auth/sp/vehicle/list",{
+      fetch(`${mainUrl}/auth/sp/vehicle/list`,{
         headers:{
            'Authorization' : `Bearer ${login.token}`
         }

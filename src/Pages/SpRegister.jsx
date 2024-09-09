@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux"
 import { Link, useNavigate } from "react-router-dom"
 import { addToken } from "../redux/Slice"
 import toast, { Toaster } from "react-hot-toast"
+import { mainUrl } from "./api"
 
 function SpRegister(){
   const nameBox=useRef()
@@ -40,7 +41,7 @@ function SpRegister(){
       contact_person:ccpersonBox.current.value
     }
     
-    fetch("http://localhost:8989/rental/sp/register",{
+    fetch(`${mainUrl}/rental/sp/register`,{
       method:'POST',
       headers:{
         'content-type':'application/json'

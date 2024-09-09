@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
 import { addall_vehicle, addSp_vehicle } from "../redux/Slice"
 import toast from "react-hot-toast"
+import { mainUrl } from "./api"
 
 function AddVehicle(){
     const vehicle=useSelector(state=>state.carts.vehicle)
@@ -38,7 +39,7 @@ function AddVehicle(){
        
         
             try{
-        fetch("http://localhost:8989/auth/sp/save_vehicle",{
+        fetch(`${mainUrl}/auth/sp/save_vehicle`,{
             method:'POST',
             headers:{
               'Authorization':`Bearer ${login.token}`

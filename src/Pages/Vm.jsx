@@ -8,6 +8,7 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import { useState } from "react"
 import toast, { Toaster } from "react-hot-toast"
+import { mainUrl } from "./api"
 function Vm(){
    const login =useSelector(state=>state.carts.login)
     const vehicle=useSelector(state=>state.carts.vehicle)
@@ -20,7 +21,7 @@ function Vm(){
    const done=(msg)=>toast.success(msg)
     const remove=(obj)=>{
             try{
-               fetch(`http://localhost:8989/auth/admin/delete_vm/${obj.id}`,{
+               fetch(`${mainUrl}/auth/admin/delete_vm/${obj.id}`,{
                   method:"DELETE",
                   headers:{
                      'Authorization':`Bearer ${login.token}`
@@ -43,7 +44,7 @@ function Vm(){
             }
           }
            try{
-            fetch(`http://localhost:8989/auth/admin/cust/update/${update.id}`,{
+            fetch(`${mainUrl}/auth/admin/cust/update/${update.id}`,{
                method:'PUT',
                headers:{
                 'Authorization':`Bearer ${login.token}`

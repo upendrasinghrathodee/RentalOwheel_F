@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {  faTrash, faUserEdit } from "@fortawesome/free-solid-svg-icons"
 import { useNavigate } from "react-router-dom"
 import toast from "react-hot-toast"
+import { mainUrl } from "./api"
 
 function Cust(){
    const cust=useSelector(state=>state.carts.cust)
@@ -13,7 +14,7 @@ function Cust(){
    const notify=(msg)=>toast.error(msg)
    const done=(msg)=>toast.success(msg)
    const del=(obj)=>{
-      const url=`http://localhost:8989/auth/admin/cust/delete/${obj.id}`
+      const url=`${mainUrl}/auth/admin/cust/delete/${obj.id}`
 
       if(window.confirm("Are You Sure that you want to delete the User ?")){
       try{

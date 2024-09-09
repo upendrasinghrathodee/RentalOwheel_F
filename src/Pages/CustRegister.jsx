@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux"
 import { Link, useNavigate } from "react-router-dom"
 import { addToken } from "../redux/Slice"
 import toast, { Toaster } from "react-hot-toast"
+import { mainUrl } from "./api"
 
 function CustRegister(){
    const nameBox=useRef()
@@ -28,7 +29,7 @@ function CustRegister(){
           phone:phoneBox.current.value,
           password:passBox1.current.value
       }
-      fetch("http://localhost:8989/rental/cust/register",{
+      fetch(`${mainUrl}/rental/cust/register`,{
          method:"POST",
          headers: {
           "Content-Type": "application/json",

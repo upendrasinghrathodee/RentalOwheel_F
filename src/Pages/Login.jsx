@@ -4,6 +4,7 @@ import { addToken, removeToken } from "../redux/Slice";
 import { Alert } from "@mui/material";
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
+import { mainUrl } from "./api";
 
 
 
@@ -30,7 +31,7 @@ function Login() {
       password: passBox.value,
     };
     try {
-      fetch("http://localhost:8989/rental/login", {
+      fetch(`${mainUrl}/rental/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {  faTrash, faUserEdit } from "@fortawesome/free-solid-svg-icons"
 import toast, { Toaster } from "react-hot-toast"
 import { reomove_all_vehicle, reomove_Sp_vehicle } from "../redux/Slice"
+import { mainUrl } from "./api"
 function Vehicle(){
    const navigate=useNavigate()
    const login=useSelector(state=>state.carts.login)
@@ -13,7 +14,7 @@ function Vehicle(){
    const done=(msg)=>toast.success(msg)
    const del=(obj)=>{
        try{
-            fetch(`http://localhost:8989/auth/sp/delete/${obj.id}`,{
+            fetch(`${mainUrl}/auth/sp/delete/${obj.id}`,{
                method:'DELETE',
          headers:{
             'Authorization':`Bearer ${login.token}`

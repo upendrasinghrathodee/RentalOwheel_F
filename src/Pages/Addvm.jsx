@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { addVehicle } from "../redux/Slice"
 import { useNavigate } from "react-router-dom"
 import toast, { Toaster } from "react-hot-toast"
+import { mainUrl } from "./api"
 function Addvm(){
      const login=useSelector(state=>state.carts.login)
      const dispatch=useDispatch()
@@ -30,7 +31,7 @@ function Addvm(){
            frm.append("capacity_tons",ob.capacity_tons*1)
            frm.append("image",imgBox.current.files[0])
             try{
-                fetch("http://localhost:8989/auth/admin/save_vm",{
+                fetch(`${mainUrl}/auth/admin/save_vm`,{
                   method:'POST',
                   headers:{
                     'Authorization':`Bearer ${login.token}`
