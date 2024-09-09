@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/RentalOwheel_F/static/css/main.e6c13ad2.css",
+    "main.js": "/RentalOwheel_F/static/js/main.3465e414.js",
+    "static/js/453.7ff9d39b.chunk.js": "/RentalOwheel_F/static/js/453.7ff9d39b.chunk.js",
+    "index.html": "/RentalOwheel_F/index.html",
+    "main.e6c13ad2.css.map": "/RentalOwheel_F/static/css/main.e6c13ad2.css.map",
+    "main.3465e414.js.map": "/RentalOwheel_F/static/js/main.3465e414.js.map",
+    "453.7ff9d39b.chunk.js.map": "/RentalOwheel_F/static/js/453.7ff9d39b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.3465e414.js"
+  ]
+}
