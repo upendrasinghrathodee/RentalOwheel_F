@@ -18,7 +18,7 @@ function Navbar(){
                 <div className="d-inline-flex align-items-center">
                     <a className="text-body pr-3" href=""><i className="fa fa-phone-alt mr-2"></i>+917581807821</a>
                     <span className="text-body">|</span>
-                    <a className="text-body px-3" href=""><i className="fa fa-envelope mr-2"></i>RentalOwheel@gmail.com</a>
+                    <a className="text-body px-3" href=""><i className="fa fa-envelope mr-2"></i>TrueRent@gmail.com</a>
                 </div>
             </div>
             <div className="col-md-6 text-center text-lg-right">
@@ -49,7 +49,7 @@ function Navbar(){
         <div className="position-relative px-lg-5" style={{zIndex:9}}>
             <nav className="navbar navbar-expand-lg bg-secondary navbar-dark py-3 py-lg-0 pl-3 pl-lg-5">
                 <a href="" className="navbar-brand" >
-                    <h1 className=" text-primary mb-1">RentalOwheel</h1>
+                    <h1 className=" text-primary mb-1">TrueRent</h1>
                 </a>
                 <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span className="navbar-toggler-icon"></span>

@@ -19,7 +19,7 @@ function About(){
     {/* <!-- About Start --> */}
     <div className="container-fluid py-5">
         <div className="container pt-5 pb-3">
-            <h1 className="display-4 text-uppercase text-center mb-5">Welcome To <span className="text-primary">RentalOwheel Community</span></h1>
+            <h1 className="display-4 text-uppercase text-center mb-5">Welcome To <span className="text-primary">TrueRent Community</span></h1>
             <div className="row justify-content-center">
                 <div className="col-lg-10 text-center">
                     <img className="w-75 mb-4" src="img/about.png" alt="" />

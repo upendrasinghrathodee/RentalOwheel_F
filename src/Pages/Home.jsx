@@ -7,7 +7,7 @@ function Home(){
    const login=useSelector(state=>state.carts.login)
    const navigate=useNavigate()
     return login.role=="admin"?navigate('/vm'):<>
-    <h1 className="display-4 text-uppercase text-center mb-5">Welcome To <span className="text-primary">RentalOwheel Community {login.name}</span></h1>
+    <h1 className="display-4 text-uppercase text-center mb-5">Welcome To <span className="text-primary">TrueRent Community {login.name}</span></h1>
 
   
     {login.islogin?"":<div className="container-fluid py-5">
